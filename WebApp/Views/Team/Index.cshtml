@@ -1,0 +1,138 @@
+﻿@model IEnumerable<WebApp.Models.PlayerSeasonStatistics>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DisplayName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamAbbreviation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinutesPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FieldGoalsMadePerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FieldGoalAttemptsPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FieldGoalPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FreeThrowsMadePerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FreeThrowAttemptsPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FreeThrowPercentage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThreePointersMadePerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReboundsPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssistsPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StealsPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlocksPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TurnoversPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointsPerGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlusMinus)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplayName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamAbbreviation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinutesPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FieldGoalsMadePerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FieldGoalAttemptsPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FieldGoalPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreeThrowsMadePerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreeThrowAttemptsPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreeThrowPercentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThreePointersMadePerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReboundsPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssistsPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StealsPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlocksPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TurnoversPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointsPerGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlusMinus)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
